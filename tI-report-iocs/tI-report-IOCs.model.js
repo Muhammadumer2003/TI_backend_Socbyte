@@ -7,7 +7,7 @@ const createIOCsTable = async () => {
       table.increments('id').primary(); // Primary key
       table.integer('reportId').unsigned().notNullable(); // Foreign key to ti_report
       table.json('IOC').notNullable(); // Store IOCs as JSON
-      table.string('type').notNullable(); // Store IOCs as JSON
+      table.string('type'); // Store IOCs as JSON
       table.timestamps(true, true); // Created at and updated at timestamps
 
       // Foreign key constraint
